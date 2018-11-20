@@ -15,6 +15,8 @@
 		69F406842195738C00795E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F406822195738C00795E39 /* LaunchScreen.storyboard */; };
 		69F4068F2195738D00795E39 /* JvonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4068E2195738D00795E39 /* JvonTests.swift */; };
 		69F4069A2195738D00795E39 /* JvonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F406992195738D00795E39 /* JvonUITests.swift */; };
+		69F406A82198FEF100795E39 /* Doctor_Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F406A72198FEF100795E39 /* Doctor_Schedule.swift */; };
+		69F406AA2198FFD700795E39 /* Schedule_Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F406A92198FFD700795E39 /* Schedule_Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		69F406952195738D00795E39 /* JvonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JvonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F406992195738D00795E39 /* JvonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JvonUITests.swift; sourceTree = "<group>"; };
 		69F4069B2195738D00795E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F406A72198FEF100795E39 /* Doctor_Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor_Schedule.swift; sourceTree = "<group>"; };
+		69F406A92198FFD700795E39 /* Schedule_Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule_Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				69F406802195738C00795E39 /* Assets.xcassets */,
 				69F406822195738C00795E39 /* LaunchScreen.storyboard */,
 				69F406852195738C00795E39 /* Info.plist */,
+				69F406A72198FEF100795E39 /* Doctor_Schedule.swift */,
+				69F406A92198FFD700795E39 /* Schedule_Module.swift */,
 			);
 			path = Jvon;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				69F4067C2195738900795E39 /* SecondViewController.swift in Sources */,
+				69F406AA2198FFD700795E39 /* Schedule_Module.swift in Sources */,
 				69F406782195738900795E39 /* AppDelegate.swift in Sources */,
+				69F406A82198FEF100795E39 /* Doctor_Schedule.swift in Sources */,
 				69F4067A2195738900795E39 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
