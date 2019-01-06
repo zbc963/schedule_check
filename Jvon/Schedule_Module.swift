@@ -15,10 +15,10 @@ class Schedule_Module:NSObject {
     
     var delegate:ScheduleModelDelegate?
   
-    func getItem(date: String){
+    func getItem(date: String,doctor: String){
 //        get the web service Url
         print(date)
-
+        print(doctor.lowercased())
         let parameters = ["sdate":date,"hour":"","last_name":"philip"]
 
 

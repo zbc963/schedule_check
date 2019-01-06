@@ -8,10 +8,32 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, ScheduleModelDelegate,UITableViewDataSource,UITableViewDelegate{
+class FirstViewController: UIViewController, ScheduleModelDelegate,UITableViewDataSource,UITableViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITextViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Doctors.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Doctors[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedDoctor = Doctors[row]
+        DoctorDDL.text = selectedDoctor
+    }
+    var selectedDoctor:String?
+    var Doctors = ["", "Dr. Philip", "Dr. Wang"]
+    
+    func createPickerView(){
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        DoctorDDL.inputView = pickerView
+        
+    }
     @IBOutlet weak var DoctorDDL: UITextField!
-    let Doctors = ["", "Dr. Philip", "Dr. Wang"]
+    
     
     @IBOutlet weak var DateDDL: UITextField!
     private var datePicker:UIDatePicker?
@@ -23,8 +45,9 @@ class FirstViewController: UIViewController, ScheduleModelDelegate,UITableViewDa
         tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
         // initiate calling the items download
-        let info = DateDDL.text as! String
-        schedule.getItem(date: info)
+        let selectedDate = DateDDL.text as! String
+        let selectedDoctor = DoctorDDL.text as! String
+        schedule.getItem(date: selectedDate,doctor: selectedDoctor)
         schedule.delegate = self
     }
     
@@ -35,6 +58,7 @@ class FirstViewController: UIViewController, ScheduleModelDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         dateSelector()
+        createPickerView()
     }
     
 //define doctor view
