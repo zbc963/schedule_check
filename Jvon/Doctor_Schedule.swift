@@ -10,6 +10,16 @@ import Foundation
 
 
 struct Doctor_Schedule:Decodable{
-    var id = ""
-    var sdate = ""
+    var hour=""
+    var last_name = ""
+    var first_name=""
+    var sdate=""
+}
+
+
+struct upload:Codable{
+    let sdate:String
+    let hour:String
+    let last_name:String
+    
 }
